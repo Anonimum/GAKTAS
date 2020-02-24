@@ -1,0 +1,53 @@
+{
+  "name": "wolfbot",
+  "version": "0.0.1",
+  "description": "Mboy x Wolf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.9.4"
+  },
+  "author": "Mboy / Wolf",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "fs": "^0.0.2",
+    "instagram-user": "^2.0.1",
+    "basic-instagram-user-details": "^1.0.2",
+    "instagram-profile-picture": "^1.0.5",
+    "canvas-constructor": "^3.1.0",
+    "moment": "^2.24.0",
+    "node-gyp": "^6.1.0",
+    "node-opus": "^0.3.2",
+    "canvas": "^2.6.1",
+    "superagent": "^5.2.2",
+    "opusscript": "^0.0.7",
+    "uws": "^99.0.0",
+    "ytdl-core": "^1.0.9",
+    "ffmpeg": "^0.0.4",
+    "simple-youtube-api": "^5.2.1",
+    "common-tags": "^1.8.0",
+    "nekos.life": "^2.0.5",
+    "random-puppy": "^1.1.0",
+    "memejs": "^1.1.3",
+    "figlet": "^1.2.4",
+    "cheerio": "^0.22.0",
+    "mojang-api": "^0.0.2",
+    "snekfetch": "^4.0.4",
+    "moment-duration-format": "^2.2.2",
+    "node-superfetch": "^0.1.10",
+    "table": "^5.4.6",
+    "klasa": "^0.4.0",
+    "gifencoder": "^2.0.1",
+    "quick.db": "^6.3.2",
+    "axios": "^0.19.2",
+    "get-artist-title": "^1.2.0",
+    "gif-search": "^2.0.1",
+    "string-similarity": "^4.0.0"
+  }
+}

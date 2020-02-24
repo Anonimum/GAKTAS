@@ -1,0 +1,32 @@
+const Discord = require("discord.js");
+
+module.exports.run = async (bot, message, args) => {
+message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
+    },
+    title: "Bot Information",
+    url: "http://google.com",
+    description: "Makasih Udh Dinvite loh =)",
+    fields: [{
+        name: "Developers",
+        value: "Developers Ganteng Mboy#8039 "
+      },
+      {
+        name: "Feedback",
+        value: "[Discord Server Family](https://discord.gg/MHDsxWw)"
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "© Bukan Komunitas=)"
+    }
+  }
+});
+}
+module.exports.help = {
+name:"?info"
+}

@@ -1,0 +1,193 @@
+   if (message == `<@${client.user.id}>` || message == `<@!${client.user.id}>`) {
+  let embed = new Discord.RichEmbed()
+    .setColor("AQUA")
+    .setDescription(`Hi ${message.member} My Prefix In This Server ${prefix}\n${prefix}help For More Info`)
+    message.channel.send(embed)
+    }
+    
+    client.on("ready", () => {
+    setInterval(() => {
+     const status = [
+      `Dibuat Oleh @Mboy69#8039`,
+      `Prefix w.`,
+      `${client.guilds.size} Server`,
+      `${client.channels.size} Voice Channels`,
+      `${client.users.size} Users`
+         
+    ];
+     let random = Math.floor(Math.random() * status.length)
+     client.user.setPresence({ game: { name: status[random], type: "watching", url: "https://www.twitch.tv/itzmboybot"}});
+  }, 5000);
+})
+
+  client.on('voiceStateUpdate', (oldMember, newMember) => {
+    
+    let oldUserChannel = oldMember.voiceChannelID;
+    let newUserChannel = newMember.voiceChannelID;
+    let channelVerify = '676987923538640910';
+    let newUserRoles = oldMember.guild.roles.get('677058861357596725');
+    
+    if(newUserChannel == channelVerify){
+    newMember.guild.channels.get(channelVerify).setName('⌛ Loading...');
+    newMember.voiceChannel.join() 
+      .then(connection => {
+      const dispatcher = connection.playStream('https://f.top4top.io/m_1503rade70.mp3');
+      connection.dispatcher.setVolumeLogarithmic(100 / 100);
+
+      setTimeout (() => {
+        newMember.guild.channels.get(channelVerify).setName('🔐 Verify');
+        connection.disconnect();
+        newMember.addRole(newUserRoles);
+      }, 20000);
+    });
+    
+    } else if(oldUserChannel !== channelVerify){
+  
+    };
+  });
+  
+  
+  const Discord = require("discord.js");
+const mb = new Discord.Client({disableEveryone: true});
+mb.commands = new Discord.Collection();
+const {color} = require('./config.json');
+const queue = new Map();
+const ytdl = require("ytdl-core");
+
+
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log('Pinging');
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
+
+mb.on('message', async message => {
+
+    let prefix = 'w.'; // UBAH PREFIX DISINI
+  
+   if (message == `<@${mb.user.id}>` || message == `<@!${mb.user.id}>`) {
+  let embed = new Discord.RichEmbed()
+    .setColor("AQUA")
+    .setDescription(`Halo ${message.member} Ini Prefix Ku :3" ${prefix}\n${prefix}Help Buat Info lain`)
+    message.channel.send(embed)
+    }
+    let msg = message.content.toLowerCase();
+    let args = message.content.slice(prefix.length).trim().split(" ");
+    let cmd = args.shift().toLowerCase();
+    let sender = message.author;
+
+    if (!msg.startsWith(prefix)) return;
+    if (sender.bot) return;
+    
+    try {
+        let commandFile = require(`./cmds/${cmd}.js`); 
+        commandFile.run(mb, message, args, color, queue); 
+    } catch(e) { 
+        console.log(e.message); 
+    } finally { 
+        console.log(`${message.author.username} ran the command: ${cmd} on ${message.guild.name}`);
+    }
+    if (message.content === '--') {
+        if (message.member.voiceChannel) {
+            message.member.voiceChannel.leave();
+            console.log("left a channel");
+        } else {    }
+    }
+if (cmd === "nusantara")
+  {
+      message.member.voiceChannel.join()
+                    .then(connection => {
+    console.log("joined channel");
+    const pokesamwan = [ 
+      `https://www.youtube.com/watch?v=jdgfD8ac6ao`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=Tet6_BlStEM`,
+      `https://www.youtube.com/watch?v=M-P4QBt-FWw`,
+      `https://www.youtube.com/watch?v=XimX18tJitU `, // promo
+      `https://www.youtube.com/watch?v=jjYpd6X41VA`,
+      `https://www.youtube.com/watch?v=MBdVXkSdhwU`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=Y5q7etvf8_o`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=MRAOKsDtdCQ`,
+      `https://www.youtube.com/watch?v=YnMRjO3UdN8`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=qU98N9K8Hpg`,
+      `https://www.youtube.com/watch?v=RBMKRfY9C7c`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0` // promo
+
+        
+    ];
+const wordAnswer = pokesamwan[Math.floor(Math.random() * pokesamwan.length)]
+      	const dispatcher = connection.playStream(ytdl(`${wordAnswer}`))
+        	connection.dispatcher.setVolumeLogarithmic(1);
+    message.channel.send({embed: new Discord.RichEmbed()
+                    .setAuthor(message.author.tag,message.author.avatarURL)
+                    .setDescription(`😊 **Nusantara Radio Demo - STASIUN MUSIC DISCORD !!**`)
+.setColor("RANDOM")
+                         })
+function tetew() {
+    console.log("joined channel");
+    const pokesamwan = [ 
+      `https://www.youtube.com/watch?v=jdgfD8ac6ao`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=Tet6_BlStEM`,
+      `https://www.youtube.com/watch?v=M-P4QBt-FWw`,
+      `https://www.youtube.com/watch?v=XimX18tJitU `, // promo
+      `https://www.youtube.com/watch?v=jjYpd6X41VA`,
+      `https://www.youtube.com/watch?v=MBdVXkSdhwU`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=Y5q7etvf8_o`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=MRAOKsDtdCQ`,
+      `https://www.youtube.com/watch?v=YnMRjO3UdN8`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0`, // promo
+      `https://www.youtube.com/watch?v=qU98N9K8Hpg`,
+      `https://www.youtube.com/watch?v=RBMKRfY9C7c`,
+      `https://www.youtube.com/watch?v=GXNqgT308f0` // promo
+    ];
+const wordAnswer = pokesamwan[Math.floor(Math.random() * pokesamwan.length)]
+
+      	const dispatcher = connection.playStream(ytdl(`${wordAnswer}`))
+        	connection.dispatcher.setVolumeLogarithmic(1);
+}; setInterval(tetew, 225000)
+                        
+ })
+
+  }
+if (cmd === "keluar")
+  {
+      message.member.voiceChannel.leave()
+  }
+});
+
+mb.login(process.env.TOKEN);
+
+    mb.on("ready", () => {
+    setInterval(() => {
+     const status = [
+      `Dibuat Oleh @KatanyaMboy#8039`,
+      `Prefix w.`,
+      `${mb.guilds.size} Server`,
+      `${mb.channels.size} Voice Channels`,
+      `${mb.users.size} Users`
+         
+    ];
+     let random = Math.floor(Math.random() * status.length)
+     mb.user.setPresence({ game: { name: status[random], type: "PLAYING", url: "https://www.twitch.tv/itzmboybot"}});
+  }, 5000);
+})
+
+
+mb.on("ready", async () => {
+    console.log(`Logged in as : ${mb.user.tag}`);
+    console.log(`${mb.user.username} is ready!`)
+});
+
